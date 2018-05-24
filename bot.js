@@ -39,4 +39,16 @@ if (msg.content === 'Remove Role') {
 }
 }) ;
 
+client.on('message', msg => {
+var channel = msg.member.guild.channels.find('name', 'commands') ;
+if (msg.channel.id === channel.id ) {
+if (msg.content === 'Exit') {
+  console.log('Exit durch: '+msg.member.user.username) ;
+  msg.delete(600);
+  msg.reply('Tschuhus');
+  client.destroy()
+}
+}
+}) ;
+
 client.login(token);
