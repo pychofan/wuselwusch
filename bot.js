@@ -46,7 +46,7 @@ if (msg.content === 'Exit') {
   console.log('Exit durch: '+msg.member.user.username) ;
   msg.delete(600);
   msg.reply('Tschuhus');
-  client.destroy()
+  client.destroy();
 }
 }
 }) ;
